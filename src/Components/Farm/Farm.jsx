@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Cart from "./Cart";
 const FarmS = styled.div`
   & div.text {
     padding: 24px;
@@ -30,21 +31,52 @@ const FarmS = styled.div`
     align-items: center;
     position: relative;
     justify-content: space-between;
+    & > div{
+      flex: 50%;
+    }
+    & > div:first-child {
+      display: flex;
+      justify-content: space-around;
+    }
   }
   .stak {
     display: flex;
     align-items: center;
     justify-content: center;
     input {
+      position:relative;
+      border-radius: 24px;
         outline: none;
         appearance: none;
         width: 35px;
         height: 20px;
         background: blue;
         margin-right: 8px;
+        background:rgb(238, 234, 244);
+      transition: 0.5s;
+
     }
+    input::before {
+      background:white;
+      position: absolute;
+      content: "";
+      width:  18px;
+      height: 18px;
+      border-radius: 50%;
+      top:  1px;
+      left: 1px;
+      transition: 0.5s;
+    }
+    input:checked::before {
+      left: unset;
+      transition: 0.5s;
+
+      right: 1px;
+    }
+
     input:checked {
-        background: red;
+      appearance: none;
+        background: rgb(49, 208, 170);
     }
   }
   .input {
@@ -78,8 +110,6 @@ const FarmS = styled.div`
         }
       }
     }
-    & > div:first-child {
-    }
   }
   .toggle {
     background: rgb(238, 234, 244);
@@ -89,7 +119,6 @@ const FarmS = styled.div`
       align-items: center;
       border: 0px;
       border-radius: 16px;
-      box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
       cursor: pointer;
       display: inline-flex;
       font-family: inherit;
@@ -103,8 +132,14 @@ const FarmS = styled.div`
       transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
       height: 32px;
       padding: 0px 16px;
-      background-color: rgb(126, 113, 173);
-      color: rgb(255, 255, 255);
+      background-color: transparent;
+      color: rgb(126, 113, 173);
+      &.active {
+        color: white;
+        background-color: rgb(126, 113, 173);
+        box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+
+      }
     }
   }
 `;
@@ -122,7 +157,7 @@ const Farm = () => {
             <label htmlFor="stack">Staked only</label>
           </div>
           <div className="toggle">
-            <span>Live</span>
+            <span className="active">Live</span>
             <span>Finished</span>
           </div>
         </div>
@@ -140,6 +175,17 @@ const Farm = () => {
             </label>
             <input type="text" placeholder="Search Farms" id="search" />
           </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row">
+          <Cart active />
+          <Cart />
+          <Cart />
+          <Cart />
+          <Cart />
+          <Cart />
+          <Cart />
         </div>
       </div>
     </FarmS>
