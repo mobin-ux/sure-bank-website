@@ -16,7 +16,10 @@ const NavigationS = styled.div`
   overflow: initial;
   transform: translate3d(0px, 0px, 0px);
   transition: 0.3s;
-  width: ${(props) => props.status ? "240px" : "0"};
+  width: ${(props) => props.status ? "240px" : "4%"};
+  @media (max-width: 950px) {
+  width: ${(props) => props.status ? "240px" : "13%"};
+  }
   & > div.list {
     display: flex;
     flex-direction: column;
@@ -35,9 +38,19 @@ const NavigationS = styled.div`
       width: 8px;
     }
     & > div {
+      & > a > div {
+        display: ${(props) => props.status ? "flex" : "none"};
+      }
+      & > div > div {
+        display: ${(props) => props.status ? "flex" : "none"};
+        
+      }
+      & svg:last-child {
+        display: ${(props) => props.status ? "inline" : "none"};
+      }
+
       color: white;
       cursor: pointer;
-      display: flex;
       -webkit-box-align: center;
       align-items: center;
       height: 48px;

@@ -62,7 +62,7 @@ const items = [
   {
     title: "Farms",
     image: farm,
-    url: "/",
+    url: "/farm",
     isSvg: false,
   },
   {
