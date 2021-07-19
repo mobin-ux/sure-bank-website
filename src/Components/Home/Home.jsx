@@ -106,6 +106,7 @@ const Home = () => {
         <h1>SureBank</h1>
         <p>SureCrypto DeFi and NFT Service Room</p>
       </div>
+      <div className="c">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-12 col-sm-12 ">
@@ -214,7 +215,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </HomeS>
+    
+      </div>
+      </HomeS>
   );
 };
 export default Home;

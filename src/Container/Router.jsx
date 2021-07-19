@@ -6,7 +6,6 @@ const Router = () => {
     <Switch>
       <Route exact component={Home} path="/" />
       <Route exact component={Farm} path="/Farm" />
-
     </Switch>
   );
 };

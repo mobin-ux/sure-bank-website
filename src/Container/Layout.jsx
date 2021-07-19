@@ -5,7 +5,7 @@ import Navigation from "../Components/Navigation/Navigation";
 import Router from "../Container/Router";
 const Root = styled.div`
   @media screen and (min-width: 968px) {
-    padding-left: 240px;
+    padding-left: ${props => props.small ? "0" : "240px"};
     max-width: 100%;
   }
   -webkit-box-flex: 1;
@@ -38,7 +38,7 @@ const Layout = () => {
       )}
       <Header handle={handleMenu} state={smallMenu} />
       <Navigation state={smallMenu} />
-      <Root>
+      <Root small={smallMenu}>
         <Router />
       </Root>
     </Fragment>
