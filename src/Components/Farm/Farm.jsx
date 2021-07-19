@@ -1,3 +1,5 @@
+import {createPortal} from 'react-dom';
+import {Fragment} from 'react';
 import styled from "styled-components";
 import Cart from "./Cart";
 const FarmS = styled.div`
@@ -143,9 +145,12 @@ const FarmS = styled.div`
     }
   }
 `;
+
 const Farm = () => {
   return (
+    <Fragment>
     <FarmS>
+      
       <div className="text">
         <h1>Farms and Staking</h1>
         <p>Stake Sure or LP tokens to earn</p>
@@ -189,6 +194,7 @@ const Farm = () => {
         </div>
       </div>
     </FarmS>
+    </Fragment>
   );
 };
 export default Farm;

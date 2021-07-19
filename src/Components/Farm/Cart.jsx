@@ -193,11 +193,18 @@ p{
 `
 const Cart = (props) => {
     const [toggle , setToggle] = useState(false);
+    const [modal , setModal] = useState(false);
+    const handleModal = () => {
+        setModal(!modal);
+    }
     const handleToggle = () => {
         setToggle(!toggle);
     }
     return (
-        <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <Fragment>
+            
+            <div className="col-lg-4 col-md-6 col-sm-12 mb-5">
+            {modal && <div className="backmenu" onClick={handleModal}></div>}
             <CartS active={props.active}>
                 <div className="b"></div>
                 <div className="title-cart">
@@ -229,7 +236,7 @@ const Cart = (props) => {
                     </div>
                     <div>
                         <p><span className="c-purple t">CAKE-BNB LP</span> <span className="t">STAKED</span></p>
-                        <Button backgroup="rgb(98, 54, 255)" color="#fff">Unlock Wallet</Button>
+                        <Button onClick={handleModal} backgroup="rgb(98, 54, 255)" color="#fff">Unlock Wallet</Button>
                     </div>
                 </div>
                 <div className="footer-cart">
@@ -249,6 +256,7 @@ const Cart = (props) => {
                 </Accordian>
             </CartS>
         </div>
+        </Fragment>
     )
 }
 export default Cart;
