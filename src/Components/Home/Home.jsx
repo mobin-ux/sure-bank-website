@@ -61,7 +61,7 @@ const HomeS = styled.div`
     }
     @media(max-width: 400px){
       .s-title{
-        font-size: 25px;
+        font-size: 26px;
       }
     }
     span {

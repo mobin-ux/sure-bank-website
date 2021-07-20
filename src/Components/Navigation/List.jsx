@@ -7,7 +7,7 @@ import info from "../../Assets/Images/info_icon.png";
 import contact from "../../Assets/Images/contact_icon.png";
 import dollor from "../../Assets/Images/surecrypto_white.png";
 const ListS = styled.div`
-margin: 15px 0;
+margin: 5px 0;
   img,
   svg {
     width: 19px;
@@ -136,7 +136,7 @@ const LastItemS = styled.div`
 `;
 const ItemNav = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   width: 100%;
   img {
