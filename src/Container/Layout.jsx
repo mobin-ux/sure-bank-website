@@ -25,11 +25,9 @@ const Layout = () => {
     } else {
       setSmallMenu(false);
     }
-    console.log(smallMenu);
   }, []);
   const handleMenu = () => {
     setSmallMenu(!smallMenu);
-    console.log(smallMenu);
   };
   return (
     <Fragment>
@@ -37,7 +35,7 @@ const Layout = () => {
         <div className="backmenu"></div>
       )}
       <Header handle={handleMenu} state={smallMenu} />
-      <Navigation state={smallMenu} />
+      <Navigation state={smallMenu} clickMenu={handleMenu}/>
       <Root small={smallMenu}>
         <Router />
       </Root>

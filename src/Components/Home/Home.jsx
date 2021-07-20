@@ -54,9 +54,15 @@ const HomeS = styled.div`
     }
   }
   .announcements {
+    overflow: auto;
     p {
       color: rgb(126, 113, 173);
       font-size: 14px;
+    }
+    @media(max-width: 400px){
+      .s-title{
+        font-size: 25px;
+      }
     }
     span {
       display: block;
@@ -127,7 +133,7 @@ const Home = () => {
           <div className="col-lg-6 col-md-12 col-sm-12 mt-5">
             <div className="card-shadow announcements">
               <div>
-                <h2 className="title">Announcements</h2>
+                <h2 className="title s-title">Announcements</h2>
                 <p>Staking will go live after the SURE Token public sales.</p>
                 {List.map((i) => (
                   <span>{i}</span>
@@ -164,7 +170,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 mt-5">
+          <div className="col-lg-4 col-md-12 col-sm-12 mt-5">
             <div className="card-shadow">
               <div>
                 <h1 className="title2">SureNFTs</h1>

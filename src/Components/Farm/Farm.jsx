@@ -223,7 +223,7 @@ const Farm = () => {
       
       <div className="text">
         <h1 >Farms and Staking</h1>
-        <p>Stake Sure or LP tokens to earn <span onClick={handleModalTwo}>(SHOW POPUP)</span></p>
+        <p>Stake Sure or LP tokens to earn</p>
       </div>
       <div className="items">
         <div>

@@ -7,9 +7,11 @@ import info from "../../Assets/Images/info_icon.png";
 import contact from "../../Assets/Images/contact_icon.png";
 import dollor from "../../Assets/Images/surecrypto_white.png";
 const ListS = styled.div`
+margin: 15px 0;
   img,
   svg {
-    width: 21px;
+    width: 19px;
+    height: 19px
   }
   svg {
     fill: white;
@@ -27,7 +29,7 @@ const ListS = styled.div`
     transition: color 0.4s ease 0s;
     -webkit-box-flex: 1;
     flex-grow: 1;
-    margin-left: 8px;
+    margin-left: 20px;
   }
 `;
 const items = [
@@ -79,7 +81,7 @@ const items = [
         width="24px"
         color="text"
         xmlns="http://www.w3.org/2000/svg"
-        class="sc-bdnxRM exjgGx"
+        className="svg"
       >
         <path d="M6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"></path>
       </svg>
@@ -88,20 +90,20 @@ const items = [
     isSvg: true,
   },
 ];
-const List = () => {
+const List = (props) => {
   return (
     <Fragment>
       {items.map((i, idx) => (
         <Fragment>
           {idx < 5 ? (
             <ListS>
-              <Link to={i.url}>
+              <Link onClick={props.click} to={i.url}>
                 {i.isSvg ? i.image : <img src={i.image} />}
                 <div>{i.title}</div>
               </Link>
             </ListS>
           ) : (
-            <LastItem svg={i.image} url={i.url} title={i.title} />
+            <LastItem svg={i.image} click={props.click} url={i.url} title={i.title} />
           )}
         </Fragment>
       ))}
@@ -112,6 +114,7 @@ const LastItemS = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  margin-top: 15px;
   svg {
     fill: white;
   }
@@ -123,7 +126,7 @@ const LastItemS = styled.div`
     text-decoration: none;
     height: 100%;
     & > div {
-      margin-left: 8px;
+      margin-left: 20px;
       color: rgb(255, 255, 255);
       transition: color 0.4s ease 0s;
       -webkit-box-flex: 1;
@@ -185,6 +188,7 @@ const SubItem = styled.div`
   height: ${(props) => (props.show ? "auto" : "0")};
   background: rgb(64, 33, 175);
   visibility: ${(props) => (props.show ? "unset" : "hidden")};
+  z-index: 6;
   a {
     display: block;
     padding: 14px 32px;
@@ -214,12 +218,12 @@ const LastItem = (props) => {
           <path d="M8.71005 11.71L11.3001 14.3C11.6901 14.69 12.3201 14.69 12.7101 14.3L15.3001 11.71C15.9301 11.08 15.4801 10 14.5901 10H9.41005C8.52005 10 8.08005 11.08 8.71005 11.71Z"></path>
         </svg>
       </div>
-      <SubItem className="item" show={showSubMenu}>
-        <Link to="/">NFT</Link>
-        <Link to="/">Loan</Link>
-        <Link to="/">Governance</Link>
-        <Link to="/">Vote</Link>
-        <Link to="/">Pool</Link>
+      <SubItem className="item"  show={showSubMenu}>
+        <Link onClick={props.click} to="/">NFT</Link>
+        <Link onClick={props.click} to="/">Loan</Link>
+        <Link onClick={props.click} to="/">Governance</Link>
+        <Link onClick={props.click} to="/">Vote</Link>
+        <Link onClick={props.click} to="/">Pool</Link>
       </SubItem>
       <br />
       <br />

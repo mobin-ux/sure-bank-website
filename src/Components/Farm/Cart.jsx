@@ -11,7 +11,7 @@ border-radius: 31px;
 position: relative;
 
 box-shadow: rgb(25 19 38 / 15%) 0px 1px 4px;
-${props => props.active && ".b {position: absolute;top: -1px;right: -1px;bottom: -3px;left: -1px;z-index: -1;background: linear-gradient(rgb(83, 222, 233), rgb(98, 54, 255)) 0% 0% / 400% 400%;border-radius: 32px;}"}
+${props => props.active && ".b {position: absolute;top: -1px;right: -1px;bottom: -3px;left: -1px;z-index: -1;background:rgb(121 83 233);border-radius: 32px;}"}
 
 .title-cart {
     display: flex;

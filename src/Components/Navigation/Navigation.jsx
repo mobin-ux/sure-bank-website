@@ -68,7 +68,7 @@ const Navigation = (props) => {
   return (
     <NavigationS status={!props.state}>
       <div className="list">
-        <List />
+        <List click={props.clickMenu} />
       </div>
     </NavigationS>
   );

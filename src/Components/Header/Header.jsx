@@ -83,7 +83,7 @@ const Header = (props) => {
             color="#6236ff"
             class="right-btn"
           >
-            Content
+            Connect
           </Button>
         </div>
       </div>
