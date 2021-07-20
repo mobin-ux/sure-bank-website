@@ -132,8 +132,9 @@ const LastItemS = styled.div`
   }
 `;
 const ItemNav = styled.div`
-  position: relative;
-  bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   img {
     margin-right: 3px;

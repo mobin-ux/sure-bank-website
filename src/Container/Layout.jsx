@@ -4,8 +4,8 @@ import Header from "../Components/Header/Header";
 import Navigation from "../Components/Navigation/Navigation";
 import Router from "../Container/Router";
 const Root = styled.div`
-  @media screen and (min-width: 968px) {
-    padding-left: ${props => props.small ? "0" : "240px"};
+  @media screen and (min-width: 950px) {
+    padding-left: ${props => props.small ? "4%" : "240px"};
     max-width: 100%;
   }
   -webkit-box-flex: 1;

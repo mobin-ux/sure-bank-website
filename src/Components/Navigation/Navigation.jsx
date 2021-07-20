@@ -18,13 +18,14 @@ const NavigationS = styled.div`
   transition: 0.3s;
   width: ${(props) => props.status ? "240px" : "4%"};
   @media (max-width: 950px) {
-  width: ${(props) => props.status ? "240px" : "13%"};
+    width: ${(props) => props.status ? "240px" : "0%"};
   }
   & > div.list {
     display: flex;
     flex-direction: column;
     overflow: hidden auto;
     height: 100%;
+    position: relative;
 
     ::-webkit-scrollbar-track {
       box-shadow: rgb(255 255 255) 0px 0px 20px inset;

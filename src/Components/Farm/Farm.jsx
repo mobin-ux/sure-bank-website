@@ -151,6 +151,9 @@ const FarmS = styled.div`
     .items {
       & > div{
         flex: 100%;
+        &:first-child {
+          margin-bottom: 20px;
+        }
       }
     }
   }
