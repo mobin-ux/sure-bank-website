@@ -111,6 +111,7 @@ const List = (props) => {
   );
 };
 const LastItemS = styled.div`
+  height: ${props => props.show ? "auto" : "48px"} !important;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -124,7 +125,7 @@ const LastItemS = styled.div`
     align-items: center;
     width: 100%;
     text-decoration: none;
-    height: 100%;
+    height: ${props => props.show ? "7%" : "100%"};
     & > div {
       margin-left: 20px;
       color: rgb(255, 255, 255);
@@ -185,7 +186,8 @@ const ItemNav = styled.div`
 `;
 const SubItem = styled.div`
   width: calc(100% + 32px);
-  height: ${(props) => (props.show ? "auto" : "0")};
+  height: ${(props) => (props.show ? "160px" : "auto")};
+  overflow-y: ${(props) => (props.show ? "scroll" : "unset")};
   background: rgb(64, 33, 175);
   visibility: ${(props) => (props.show ? "unset" : "hidden")};
   z-index: 6;
@@ -204,7 +206,7 @@ const LastItem = (props) => {
     setShowSubMenu(!showSubMenu);
   };
   return (
-    <LastItemS onClick={handleSubMenu}>
+    <LastItemS onClick={handleSubMenu} show={showSubMenu}>
       <div>
         {props.svg}
         <div>{props.title}</div>
