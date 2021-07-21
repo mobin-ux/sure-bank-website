@@ -115,7 +115,7 @@ const Home = () => {
       <div className="c">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 col-md-12 col-sm-12 mt-5">
+          <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
             <div className="card-shadow farm">
               <div>
                 <h2 className="title mb-5">Farms & Staking</h2>
@@ -130,7 +130,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-sm-12 mt-5">
+          <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
             <div className="card-shadow announcements">
               <div>
                 <h2 className="title s-title">Announcements</h2>

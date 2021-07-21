@@ -244,3 +244,9 @@ p, h1, h2, h3, h4, h5, h6, span {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+@media (max-width: 767px){
+
+  .container, .container-sm {
+    max-width: 570px !important;
+  }
+}
