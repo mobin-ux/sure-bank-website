@@ -32,7 +32,7 @@ const Layout = () => {
   return (
     <Fragment>
       {window.innerWidth <= 950 && !smallMenu && (
-        <div className="backmenu"></div>
+        <div className="backmenu" onClick={handleMenu}></div>
       )}
       <Header handle={handleMenu} state={smallMenu} />
       <Navigation state={smallMenu} clickMenu={handleMenu}/>
